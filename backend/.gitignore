@@ -1,0 +1,11 @@
+# IDE specific files
+.idea/
+
+# macOS specific files
+.DS_Store
+
+# Logs
+*.log
+
+# Output of the go coverage tool
+*.out
