@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  rtmp-server:
+    build:
+      context: . # Dockerfile이 위치한 경로
+    container_name: rtmp-server
+    ports:
+      - "1935:1935" # RTMP 포트
+      - "8080:8080" # (선택적) HTTP 상태 확인 포트
+    networks:
+      - default
+    restart: always
+    volumes:
+      - ./tmp:/tmp
+
+networks:
+  default:
+    driver: bridge
